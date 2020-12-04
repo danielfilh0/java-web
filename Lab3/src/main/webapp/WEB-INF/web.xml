@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Lab3</servlet-name>
+  	<display-name>Lab3</display-name>
+  	<description></description>
+  	<servlet-class>br.edu.ifce.lab3.Lab3</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginForm</servlet-name>
+  	<display-name>LoginForm</display-name>
+  	<description></description>
+  	<servlet-class>br.edu.ifce.lab3.LoginForm</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PagMail</servlet-name>
+  	<display-name>PagMail</display-name>
+  	<description></description>
+  	<servlet-class>br.edu.ifce.lab3.PagMail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Lab3</servlet-name>
+  	<url-pattern>/Lab3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginForm</servlet-name>
+  	<url-pattern>/LoginForm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PagMail</servlet-name>
+  	<url-pattern>/PagMail</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -29,7 +29,7 @@ public class ManipularCookie extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Criar e enviar cookie para o navegador
 		Cookie c = new Cookie("userId", "00001");
-		c.setMaxAge(60); // segundos
+		c.setMaxAge(60 * 60 * 24); // segundos
 		response.addCookie(c);
 		
 		String usuario = "Fulano de tal";
@@ -42,12 +42,18 @@ public class ManipularCookie extends HttpServlet {
 					PrintWriter out = response.getWriter();
 					out.println("<html>");
 					out.println("<body>");
-					out.println("<h2>Bem vindo" + usuario + "</h2>");
+					out.println("<h2>Welcome Back</h2>");
 					out.println("</body>");
 					out.println("</html>");
-					
 				}
 			}
+		} else {
+			PrintWriter out = response.getWriter();
+			out.println("<html>");
+			out.println("<body>");
+			out.println("<h2>Welcome Abroad</h2>");
+			out.println("</body>");
+			out.println("</html>");
 		}
 	}
 
